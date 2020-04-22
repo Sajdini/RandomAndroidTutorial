@@ -18,8 +18,11 @@ class MainActivity : AppCompatActivity() {
         list_view_activities.setOnItemClickListener { adapterView, view, i, l ->
             var className = listActivities[i]
             when (className) {
+                //this is the relative layout
                 "RelativeLayoutActivity" -> startActivity(Intent(applicationContext, RelativeLayoutActivity::class.java))
+                //this is the calculator
                 "CalculatorActivity"->startActivity(Intent(applicationContext, CalculatorActivity::class.java))
+                //this is the to do list
                 "TodoListActivity"  -> startActivity(Intent(applicationContext, ToDoListActivity::class.java))
             }
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
