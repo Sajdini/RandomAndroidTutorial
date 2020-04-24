@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_todo_list_layout.*
 
 class MainActivity : AppCompatActivity() {
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                 "CalculatorActivity"->startActivity(Intent(applicationContext, CalculatorActivity::class.java))
                 //this is the to do list
                 "TodoListActivity"  -> startActivity(Intent(applicationContext, ToDoListActivity::class.java))
+                "RecycleViewActivity"-> startActivity(Intent(applicationContext, RecycleViewActivity::class.java))
             }
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
         }
