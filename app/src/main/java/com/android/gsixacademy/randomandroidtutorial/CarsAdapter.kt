@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.recycleview_list_item.view.*
 import java.util.*
 
-class CarsAdapter(val itemList: ArrayList<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class CarsAdapter(val itemList: ArrayList<Car>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.recycleview_list_item, parent, false))
     }
@@ -19,8 +19,10 @@ class CarsAdapter(val itemList: ArrayList<String>): RecyclerView.Adapter<Recycle
         myViewHolder.bindData(itemList[position])
     }
     inner class MyViewHolder (view: View) : RecyclerView.ViewHolder(view){
-        fun bindData(itemModel: String) {
-            itemView.text_view_title.text = itemModel
+        fun bindData(itemModel: Car) {
+            itemView.image_view_car.setImageResource(itemModel.imageResource)
+            itemView.text_view_title.text = itemModel.tittle
+            itemView.text_view_description.text=itemModel.description
         }
     }
 }
