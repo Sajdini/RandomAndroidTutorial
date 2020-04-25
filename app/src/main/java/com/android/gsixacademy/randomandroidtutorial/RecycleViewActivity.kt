@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.activity_recycle_view.*
 
 class RecycleViewActivity: AppCompatActivity() {
     var listCars: ArrayList<Car> = arrayListOf()
-
+// the var listCars inherits the pattern of the array from the Class car and fills it with specified info
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycle_view)
@@ -21,7 +21,7 @@ class RecycleViewActivity: AppCompatActivity() {
         listCars.add(Car("Maserati", "Maserati Description ", R.drawable.maserati_granturismo))
         listCars.add(Car("Nissan", "Nissan Description ", R.drawable.nissan))
 
-
+            // this will help us to fill the array with 100 (as specified below) objects from the type Nissan
         for (i in 0..100){
             listCars.add(Car("Nissan", "Nissan Description"+i, R.drawable.nissan))
         }

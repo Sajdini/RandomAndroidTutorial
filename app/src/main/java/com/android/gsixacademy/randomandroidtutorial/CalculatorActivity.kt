@@ -14,6 +14,7 @@ class CalculatorActivity:AppCompatActivity() {
     }
 
     private fun initListeners() {
+        // this sets the button on function
         button_add.setOnClickListener {
             var firstNumberText = edit_text_number_one.text.toString()
             var secondNumberText = edit_text_number_two.text.toString()

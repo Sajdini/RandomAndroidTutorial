@@ -10,11 +10,13 @@ import kotlinx.android.synthetic.main.activity_todo_list_layout.*
 
 class MainActivity : AppCompatActivity() {
     var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity")
+    //this is the list that shofs the Activities we acces from Main activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var activitiesAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,listActivities)
         list_view_activities.adapter = activitiesAdapter
+        //this is a normal adapted
         list_view_activities.setOnItemClickListener { adapterView, view, i, l ->
             var className = listActivities[i]
             when (className) {
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 "TodoListActivity"  -> startActivity(Intent(applicationContext, ToDoListActivity::class.java))
                 "RecycleViewActivity"-> startActivity(Intent(applicationContext, RecycleViewActivity::class.java))
             }
+            //this is the setOnItem ClickListener for the mainactivity
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()
         }
 
