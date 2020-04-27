@@ -25,8 +25,7 @@ class CarsAdapter(val itemList: ArrayList<Car>): RecyclerView.Adapter<RecyclerVi
     inner class MyViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         fun bindData(itemModel: Car) //Car is inherited from the class CAR
         {
-            Picasso.get().load("https://www.lambonb.com/static/dealer-12703/images/huracan-evo-spyder-main-image.jpg").into(itemView.image_view_car)
- //        itemView.image_view_car.setImageResource(itemModel.imageResource)
+            itemView.image_view_car.setImageResource(itemModel.imageResource)
             itemView.text_view_title.text = itemModel.tittle
             itemView.text_view_description.text=itemModel.description
         }

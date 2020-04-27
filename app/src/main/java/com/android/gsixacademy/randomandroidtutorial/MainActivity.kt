@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_todo_list_layout.*
 
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Picasso.get().load("https://i.pinimg.com/originals/ca/db/4f/cadb4f11a07d41480e8ac930c674ac39.jpg").fit().into(image_view_background)
+
         var activitiesAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,listActivities)
         list_view_activities.adapter = activitiesAdapter
         //this is a normal adapted
