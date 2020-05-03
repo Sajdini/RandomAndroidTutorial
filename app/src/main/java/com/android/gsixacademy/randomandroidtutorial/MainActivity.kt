@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Picasso.get().load("https://cdn-ds.com/blogs-media/sites/178/2016/08/12084452/Vision-Mercedes-Maybach-6-Grille_o-1038x401.jpg").fit().into(image_view_background)
+        Picasso.get().load("https://www.soder.com/assets/images/3/maybach-pullman650-2-6ea118f9.JPG").fit().into(image_view_background)
 
         var activitiesAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,listActivities)
         list_view_activities.adapter = activitiesAdapter
