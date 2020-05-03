@@ -21,6 +21,8 @@
         <activity android:name=".CalculatorActivity"/>
         <activity android:name=".ToDoListActivity"/>
         <activity android:name=".RecycleViewActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".UserSignedInActivity"/>
     </application>
 
 </manifest>
