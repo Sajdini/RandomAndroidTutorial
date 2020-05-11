@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.android.gsixacademy.randomandroidtutorial.movies.PopularMoviesActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_todo_list_layout.*
 
 class MainActivity : AppCompatActivity() {
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity","PopularMoviesActivity")
     //this is the list that shows the Activities we acces from Main activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 "RecycleViewActivity"-> startActivity(Intent(applicationContext, RecycleViewActivity::class.java))
                 "LoginActivity"->startActivity(Intent(applicationContext,LoginActivity::class.java))
                 "UserSignedInActivity"->startActivity(Intent(applicationContext,UserSignedInActivity::class.java))
+                "PopularMoviesActivity"->startActivity(Intent(applicationContext,PopularMoviesActivity::class.java))
 
             }
             //this is the setOnItem ClickListener for the mainactivity

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.android.gsixacademy.randomandroidtutorial.api.models.Car
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recycleview_list_item.view.*
 import java.util.*
