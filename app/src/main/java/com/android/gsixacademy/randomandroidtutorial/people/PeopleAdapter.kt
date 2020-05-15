@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.gsixacademy.randomandroidtutorial.R
 import com.android.gsixacademy.randomandroidtutorial.api.models.PersonResult
-import com.android.gsixacademy.randomandroidtutorial.movies.MoviesAdapter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.people_list_item.view.*
 
@@ -14,7 +13,7 @@ class PeopleAdapter ( val itemList: ArrayList<PersonResult>, val peopleAdapterCl
 
     {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.activity_recycle_view, parent, false)
+        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.people_list_item, parent, false)
                 )
     }
 

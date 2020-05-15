@@ -8,11 +8,12 @@ import android.widget.Toast
 import com.android.gsixacademy.randomandroidtutorial.movies.PopularMoviesActivity
 import com.android.gsixacademy.randomandroidtutorial.people.PopularPeopleActivity
 import com.android.gsixacademy.randomandroidtutorial.search.SearchMoviesActivity
+import com.android.gsixacademy.randomandroidtutorial.search.SearchPeopleActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity","PopularMoviesActivity", "PopularPeopleActivity", "SearchMoviesActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity","PopularMoviesActivity", "PopularPeopleActivity", "SearchMoviesActivity","SearchPeopleActivity")
     //this is the list that shows the Activities we acces from Main activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 "PopularMoviesActivity"->startActivity(Intent(applicationContext,PopularMoviesActivity::class.java))
                 "PopularPeopleActivity"->startActivity(Intent(applicationContext, PopularPeopleActivity::class.java))
                 "SearchMoviesActivity"->startActivity(Intent(applicationContext, SearchMoviesActivity::class.java))
+                "SearchPeopleActivity"->startActivity(Intent(applicationContext, SearchPeopleActivity::class.java))
             }
             //this is the setOnItem ClickListener for the mainactivity
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()

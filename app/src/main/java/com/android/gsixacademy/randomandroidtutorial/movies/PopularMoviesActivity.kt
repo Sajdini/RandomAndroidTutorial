@@ -7,7 +7,6 @@ import com.android.gsixacademy.randomandroidtutorial.api.ServiceBuilder
 import com.android.gsixacademy.randomandroidtutorial.api.TheMovieDbApi
 import com.android.gsixacademy.randomandroidtutorial.api.models.PopularMovies
 import kotlinx.android.synthetic.main.activity_movies.*
-import kotlinx.android.synthetic.main.activity_recycle_view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,7 +26,7 @@ class PopularMoviesActivity: AppCompatActivity() {
 
                     if(moviesList!=null){
                         var moviesAdapter=MoviesAdapter(moviesList){}
-                        recycler_view_activities.adapter=moviesAdapter
+                        recyclerview_movies_activities.adapter=moviesAdapter
                     }
                 }
             }
