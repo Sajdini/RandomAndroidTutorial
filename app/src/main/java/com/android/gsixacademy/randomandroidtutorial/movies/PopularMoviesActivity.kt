@@ -17,7 +17,7 @@ class PopularMoviesActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
         val request = ServiceBuilder.buildService(TheMovieDbApi::class.java)
-        val call = request.getpPopularMovies("8dd3a40cdacd660d79bce7c46bad942e")
+        val call = request.getPopularMovies("8dd3a40cdacd660d79bce7c46bad942e")
 
         call.enqueue(object : Callback<PopularMovies> {
             override fun onResponse(call: Call<PopularMovies>, response: Response<PopularMovies>) {

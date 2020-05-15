@@ -18,7 +18,7 @@ class PopularPeopleActivity :AppCompatActivity() {
         setContentView(R.layout.activity_recycle_view)
 
         val request= ServiceBuilder.buildService(TheMovieDbApi::class.java)
-        val call= request.getpPopularPeople("8dd3a40cdacd660d79bce7c46bad942e")
+        val call= request.getPopularPeople("8dd3a40cdacd660d79bce7c46bad942e")
 
         call.enqueue(object : Callback<PopularPeople> {
             override fun onResponse(

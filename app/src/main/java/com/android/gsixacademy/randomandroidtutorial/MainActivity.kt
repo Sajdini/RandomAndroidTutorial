@@ -7,11 +7,12 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.android.gsixacademy.randomandroidtutorial.movies.PopularMoviesActivity
 import com.android.gsixacademy.randomandroidtutorial.people.PopularPeopleActivity
+import com.android.gsixacademy.randomandroidtutorial.search.SearchMoviesActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity","PopularMoviesActivity", "PopularPeopleActivity")
+    var listActivities: ArrayList<String> = arrayListOf("RelativeLayoutActivity","CalculatorActivity","TodoListActivity","RecycleViewActivity", "LoginActivity","UserSignedInActivity","PopularMoviesActivity", "PopularPeopleActivity", "SearchMoviesActivity")
     //this is the list that shows the Activities we acces from Main activity
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                 "UserSignedInActivity"->startActivity(Intent(applicationContext,UserSignedInActivity::class.java))
                 "PopularMoviesActivity"->startActivity(Intent(applicationContext,PopularMoviesActivity::class.java))
                 "PopularPeopleActivity"->startActivity(Intent(applicationContext, PopularPeopleActivity::class.java))
+                "SearchMoviesActivity"->startActivity(Intent(applicationContext, SearchMoviesActivity::class.java))
             }
             //this is the setOnItem ClickListener for the mainactivity
             Toast.makeText(applicationContext,className,Toast.LENGTH_LONG).show()

@@ -9,9 +9,12 @@ import retrofit2.http.Query
 interface TheMovieDbApi {
 
     @GET("/3/movie/popular")
-    fun getpPopularMovies(@Query("api_key")key:String): Call<PopularMovies>
+    fun getPopularMovies(@Query("api_key")key:String): Call<PopularMovies>
 
     @GET("/3/person/popular")
-    fun getpPopularPeople(@Query("api_key")key:String): Call<PopularPeople>
+    fun getPopularPeople(@Query("api_key")key:String): Call<PopularPeople>
+
+    @GET("/3/search/movie")
+    fun searchMovies(@Query("api_key") key: String, @Query("query") query: String): Call<PopularMovies>
 }
 
